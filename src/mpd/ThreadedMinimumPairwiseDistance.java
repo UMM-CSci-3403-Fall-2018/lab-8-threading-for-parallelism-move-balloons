@@ -113,7 +113,7 @@ public class ThreadedMinimumPairwiseDistance implements MinimumPairwiseDistance 
             long result = Integer.MAX_VALUE;
 
             for (int j = 0; j < N/2 ; ++j) {
-                for (int i = N/2; i < N ; ++i) {
+                for (int i = N/2; i <= j + N/2 ; ++i) {
                     // Gives us all the pairs (i, j) where N/2 ≤ i ≤ j + N/2 < N
                     long diff = Math.abs(values[i] - values[j]);
                     if (diff < result) {
